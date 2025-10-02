@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: com.PracticaPropuesta1.PracticaPropuesta1ApplicationTests
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.148 s -- in com.PracticaPropuesta1.PracticaPropuesta1ApplicationTests
