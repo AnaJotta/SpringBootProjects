@@ -1,104 +1,143 @@
-# ApirestProductos
+# 🧩 API REST de Productos — Esquema del Proyecto <br>
+<br>
+## 📋 Descripción general <br>
+- Proyecto Spring Boot que implementa una API REST para la gestión de productos. <br>
+- Permite realizar operaciones CRUD (crear, leer, actualizar, eliminar) sobre productos almacenados en una base de datos MySQL. <br>
+<br>
 
-Esta es una API REST construida con **Spring Boot** para gestionar productos de informática.  
-Permite operaciones básicas de **CRUD** (Crear, Leer, Actualizar, Eliminar) sobre entidades `Producto`.
+--- 
+
+## ⚙️ Tecnologías principales <br>
+- Java 21 <br>
+- Spring Boot 3.5.6 <br>
+- Spring Data JPA <br>
+- MySQL <br>
+- Maven <br>
+<br>
 
 ---
 
-## 📁 Estructura del proyecto
-
-- **controller** — Controladores REST para manejar peticiones HTTP
-- **service** — Lógica de negocio (servicios e interfaces)
-- **repository** — Repositorios JPA para acceso a la base de datos
-- **entity** — Clase `Producto` que mapea la tabla de productos
-- **ApirestProductosApplication.java** — Clase principal de Spring Boot
+## 📁 Estructura del proyecto <br>
+ApirestProductos/ <br>
+│ <br>
+├── src/main/java/com/anajotta/Productos/ <br>
+│   ├── controller/ → Controladores REST (manejan las peticiones HTTP) <br>
+│   │   └── ProductoController.java <br>
+│   │ <br>
+│   ├── entity/ → Entidades JPA que representan tablas en la BD <br>
+│   │   └── Producto.java <br>
+│   │ <br>
+│   ├── repository/ → Interfaces que extienden JpaRepository <br>
+│   │   └── ProductoRepository.java <br>
+│   │ <br>
+│   ├── service/ → Lógica de negocio y capa de servicios <br>
+│   │   ├── IProducto.java <br>
+│   │   └── ProductoServiceImplementar.java <br>
+│   │ <br>
+│   └── ApirestProductosApplication.java → Clase principal (main) <br>
+│ <br>
+└── src/main/resources/ <br>
+    ├── application.properties → Configuración (credenciales BD, puerto, etc.) <br>
+    └── static / templates → Recursos opcionales <br>
+<br>
 
 ---
 
+## 🔧 Configuración de la base de datos (MySQL) <br>
+Archivo: src/main/resources/application.properties <br>
+spring.datasource.url=jdbc:mysql://localhost:3306/productos_db <br>
+spring.datasource.username=tu_usuario <br>
+spring.datasource.password=tu_contraseña <br>
+spring.jpa.hibernate.ddl-auto=update <br>
+spring.jpa.show-sql=true <br>
+<br>
 
+---
 
+## ▶️ Endpoints principales <br>
+POST /productos → Crear un producto <br>
+POST /productos/lista → Crear múltiples productos <br>
+GET /productos → Obtener todos los productos <br>
+GET /productos/{id} → Buscar producto por ID <br>
+PUT /productos → Actualizar producto existente <br>
+DELETE /productos/{id} → Eliminar producto <br>
+<br>
 
-Asegúrate de que tu base de datos esté creada previamente (por ejemplo tu_base_de_datos) para que la API pueda conectarse.
+---
 
-🛠️ Endpoints disponibles
-Método	URL	Descripción
-POST /productos	Crear un nuevo producto	Recibe un objeto Producto en JSON
-POST /productos/lista	Crear múltiples productos	Recibe un array JSON de productos
-GET /productos	Obtener todos los productos	Retorna lista de productos
-GET /productos/{id}	Obtener un producto por ID	Retorna el producto con ese ID
-PUT /productos	Actualizar un producto	Recibe objeto Producto con ID existente
-DELETE /productos/{id}	Eliminar un producto	Elimina el producto con ese ID
+## 🧱 Ejemplo JSON de producto <br>
+{ <br>
+  "nombre": "Teclado mecánico RGB", <br>
+  "detalle": "Teclado con switches rojos retroiluminado", <br>
+  "precio": 79.99 <br>
+} <br>
+<br>
 
-Ejemplo de JSON para crear varios productos:
+---
 
+## 🧩 Ejemplo JSON de lista de productos <br>
 [
-{
-"nombre": "Monitor LG 24\"",
-"detalle": "Full HD IPS",
-"precio": 149.99
-},
-{
-"nombre": "Teclado Mecánico",
-"detalle": "RGB retroiluminado",
-"precio": 89.50
-}
+  {
+    "nombre": "Monitor Full HD",
+    "detalle": "Monitor 24 pulgadas 1080p",
+    "precio": 149.99
+  },
+  {
+    "nombre": "Ratón inalámbrico",
+    "detalle": "Mouse óptico con receptor USB",
+    "precio": 29.99
+  }
 ]
 
-🚀 Cómo ejecutar el proyecto
 
-Clona el repositorio:
+---
 
-git clone https://github.com/AnaJotta/SpringBootProjects.git
-cd SpringBootProjects/ApirestProductos
+## 🧪 Ejecución <br>
+1. Clonar el repositorio: `git clone https://github.com/AnaJotta/SpringBootProjects.git` <br>
+2. Abrir el proyecto ApirestProductos en IntelliJ o Spring Tool Suite. <br>
+3. Configurar las credenciales de MySQL en application.properties. <br>
+4. Ejecutar la clase ApirestProductosApplication. <br>
+5. Acceder a la API en: `http://localhost:8080/productos` <br>
 
+---
 
-Configura tu base de datos MySQL y actualiza application.properties.
+###  ✅ Pruebas con Postman
 
-Compila y ejecuta con Maven:
+- Haz peticiones POST, GET, PUT, DELETE a las rutas indicadas.
+- Para POST /productos/lista, asegúrate de enviar un array JSON, tal como en el ejemplo anterior.
 
-mvn clean install
-mvn spring-boot:run
+---
 
+### 📋 Futuras mejoras (ideas)
 
-O directamente desde tu IDE (IntelliJ, Eclipse, etc.) ejecutando la clase ApirestProductosApplication.
+- Validaciones de datos (precios no negativos, nombre obligatorio).
 
-La API se iniciará en http://localhost:8080.
+- Manejo de errores con respuestas personalizadas (404, 400, etc.).
 
-🧪 Pruebas con Postman
+- Paginación y filtros en el endpoint GET /productos.
 
-Haz peticiones POST, GET, PUT, DELETE a las rutas indicadas.
+- Autenticación y autorización (JWT, Spring Security).
 
-Para POST /productos/lista, asegúrate de enviar un array JSON, tal como en el ejemplo anterior.
+- Separación entre entity y DTO para no exponer directamente la entidad de la base de datos.
 
-📋 Futuras mejoras (ideas)
+---
 
-Validaciones de datos (precios no negativos, nombre obligatorio).
+### 👏 Contribuciones
+Las contribuciones son bienvenidas. Si deseas mejorar la aplicación, por favor sigue estos pasos:
 
-Manejo de errores con respuestas personalizadas (404, 400, etc.).
+Realiza un fork de este repositorio.
+Crea una nueva rama (git checkout -b feature/nueva-caracteristica).
+Realiza tus cambios y haz commit de ellos (git commit -am 'Añadir nueva característica').
+Sube tus cambios a tu fork (git push origin feature/nueva-caracteristica).
+Abre un pull request describiendo tus cambios.
 
-Paginación y filtros en el endpoint GET /productos.
-
-Autenticación y autorización (JWT, Spring Security).
-
-Separación entre entity y DTO para no exponer directamente la entidad de la base de datos.
+---
 
 📄 Licencia
 
 Este proyecto está bajo la licencia MIT
 
-## ⚙️ Configuración de la base de datos
 
-En `src/main/resources/application.properties`, define tus credenciales para MySQL:
-
-```properties
-spring.datasource.url=jdbc:mysql://localhost:3306/tu_base_de_datos?useSSL=false&serverTimezone=UTC
-spring.datasource.username=tu_usuario
-spring.datasource.password=tu_contraseña
-spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
-
-spring.jpa.hibernate.ddl-auto=update
-spring.jpa.show-sql=true
-spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.MySQLDialect
 
 
 
