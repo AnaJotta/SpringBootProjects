@@ -1,69 +1,65 @@
-ListaUsuarios
-Descripción
+# 👥 ListaUsuarios
 
+**Descripción**
 ListaUsuarios es una aplicación desarrollada con Spring Boot que permite gestionar una lista de usuarios.
-Proporciona funcionalidades básicas como:
 
-Crear un nuevo usuario.
+**Proporciona funcionalidades básicas como:**
 
-Leer la lista de usuarios existentes.
+- Crear un nuevo usuario.
+- Leer la lista de usuarios existentes.
+- Actualizar la información de un usuario.
+- Eliminar un usuario de la lista.
 
-Actualizar la información de un usuario.
+Este proyecto demuestra la implementación de operaciones **CRUD (Crear, Leer, Actualizar, Eliminar)** utilizando Spring Boot y una base de datos en memoria.
 
-Eliminar un usuario de la lista.
+---
 
-Este proyecto demuestra la implementación de operaciones CRUD (Crear, Leer, Actualizar, Eliminar) utilizando Spring Boot y una base de datos en memoria.
+## 🛠 Tecnologías utilizadas
 
-Tecnologías utilizadas
+- Spring Boot: Framework principal para aplicaciones Java basadas en Spring.
+- Spring Data JPA: Para la interacción con la base de datos.
+- H2 Database: Base de datos en memoria para almacenar usuarios.
 
-Spring Boot: Framework principal para aplicaciones Java basadas en Spring.
+---
 
-Spring Data JPA: Para la interacción con la base de datos.
-
-H2 Database: Base de datos en memoria para almacenar usuarios.
-
-Requisitos previos
+## ✅ Requisitos previos
 
 Antes de ejecutar la aplicación, asegúrate de tener:
 
-Java 11 o superior
+- Java 11 o superior
+- Maven
 
-Maven
- (opcional si se usa el wrapper de Maven)
+---
 
-Instalación
+## ⚙️ Instalación
 
-Clona el repositorio:
-
+- Clona el repositorio:
 git clone https://github.com/AnaJotta/SpringBootProjects.git
 cd SpringBootProjects/ListaUsuarios
 
-
-Compila y ejecuta la aplicación:
-
+- Compila y ejecuta la aplicación:
 mvn clean install
 mvn spring-boot:run
 
-
 O usando el wrapper de Maven:
-
 ./mvnw clean install
-./mvnw spring-boot:run
+./mvnw spring-boot:run (en el proyecto, este es el que usaba)
 
+- La aplicación estará disponible en: http://localhost:8080
 
-La aplicación estará disponible en: http://localhost:8080
+---
 
-Uso
+## 📲 Uso
 
-Ver usuarios: Accede a la lista de usuarios registrados.
+- Ver usuarios: Accede a la lista de usuarios registrados.
+- Agregar usuario: Completa el formulario para añadir un nuevo usuario.
+- Editar usuario: Modifica la información de un usuario existente.
+- Eliminar usuario: Elimina un usuario de la lista.
 
-Agregar usuario: Completa el formulario para añadir un nuevo usuario.
+---
 
-Editar usuario: Modifica la información de un usuario existente.
+## 📂 Estructura del proyecto
 
-Eliminar usuario: Elimina un usuario de la lista.
-
-Estructura del proyecto
 ListaUsuarios/<br>
 ├── src/<br>
 │   ├── main/<br>
@@ -86,16 +82,12 @@ ListaUsuarios/<br>
 │   │           └── edit.html<br>
 └── pom.xml<br>
 
-Contribuciones
+---
 
-Se aceptan contribuciones siguiendo estos pasos:
-
-Realiza un fork del repositorio.
-
-Crea una rama para tu funcionalidad (git checkout -b feature/nueva-funcionalidad).
-
-Realiza tus cambios y haz commit (git commit -am 'Añadir nueva funcionalidad').
-
-Sube tus cambios a tu fork (git push origin feature/nueva-funcionalidad).
-
-Abre un Pull Request.
+## 👏 Contribuciones
+Las contribuciones son bienvenidas. Si deseas mejorar la aplicación, por favor sigue estos pasos:
+- Realiza un fork de este repositorio.
+- Crea una nueva rama (git checkout -b feature/nueva-caracteristica).
+- Realiza tus cambios y haz commit de ellos (git commit -am 'Añadir nueva característica').
+- Sube tus cambios a tu fork (git push origin feature/nueva-caracteristica).
+- Abre un pull request describiendo tus cambios.
