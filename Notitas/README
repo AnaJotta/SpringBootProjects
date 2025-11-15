@@ -1,0 +1,117 @@
+# 📝 Notitas
+![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=java&logoColor=white)
+![Spring](https://img.shields.io/badge/Spring_Boot-6DB33F?style=for-the-badge&logo=spring-boot&logoColor=white)
+![Thymeleaf](https://img.shields.io/badge/Thymeleaf-005C0F?style=for-the-badge&logo=thymeleaf&logoColor=white)
+![GitHub last commit](https://img.shields.io/github/last-commit/AnaJotta/GestionTareas)
+
+Una aplicación web simple para la gestión de notas, construida con Spring Boot y Thymeleaf.
+
+---
+
+## 📌 Descripción
+Este proyecto es una aplicación web CRUD (Crear, Leer, Modificar, Eliminar) para gestionar notas personales.
+Es un ejemplo educativo de cómo construir una aplicación web monolítica usando Spring Boot, 
+persistiendo datos con Spring Data JPA (usando H2 como base de datos en memoria) y renderizando el frontend con Thymeleaf.
+
+---
+
+## 🚀 Características
+
+Crear nuevas notas con un título y un contenido.
+
+Listar todas las notas existentes en la página principal.
+
+Editar los detalles de una nota existente.
+
+Eliminar notas.
+
+Interfaz de usuario web renderizada en el servidor con Thymeleaf.
+
+Persistencia de datos en una base de datos en memoria (H2).
+
+---
+
+## 🛠 Tecnologías usadas
+
+***Backend:*** Spring Boot
+
+***Frontend:*** Thymeleaf (para renderizado de plantillas HTML)
+
+***Acceso a Datos:*** Spring Data JPA
+
+***Base de Datos:*** H2 (Base de datos en memoria)
+
+***Lenguaje:*** Java (versión 17)
+
+***Gestión de Dependencias:*** Maven
+
+***Otras dependencias:*** Lombok (para reducir código boilerplate)
+
+---
+
+## 🎯 Uso
+
+Asegúrate de tener Java 17 y Maven instalados.
+
+Clona o descarga este repositorio.
+
+Navega al directorio Notitas.
+
+Ejecuta la aplicación usando el wrapper de Maven:
+
+Bash:
+./mvnw spring-boot:run
+
+(O ejecuta la clase NotitasApplication desde tu IDE).
+
+Abre tu navegador y ve a http://localhost:8080.
+
+Desde la interfaz web podrás ver la lista de notas, crear nuevas y usar los botones de "Editar" y "Eliminar".
+
+---
+
+📁 Estructura del proyecto
+Notitas/
+│
+├── src/
+│   ├── main/
+│   │   ├── java/
+│   │   │   ├── com/notitas/
+│   │   │   │   ├── controller/   ← Controladores web (NotaController)
+│   │   │   │   ├── model/        ← Entidades JPA (Nota)
+│   │   │   │   ├── repository/   ← Repositorios Spring Data (NotaRepository)
+│   │   │   │   └── NotitasApplication.java ← Punto de entrada
+│   │   └── resources/
+│   │       ├── static/         ← (Vacío en este proyecto)
+│   │       ├── templates/      ← Plantillas Thymeleaf (index.html, form.html)
+│   │       └── application.properties ← Configuración de Spring
+│   └── test/                   ← Pruebas unitarias
+│
+└── pom.xml                     ← Dependencias de Maven
+
+
+---
+
+
+## 👏 Contribuciones
+
+Las contribuciones son bienvenidas. Si deseas mejorar la aplicación, por favor sigue estos pasos:
+
+- Realiza un fork de este repositorio
+- Crea una nueva rama (git checkout -b feature/nueva-caracteristica).
+- Realiza tus cambios y haz commit de ellos (git commit -am 'Añadir nueva característica').
+- Sube tus cambios a tu fork (git push origin feature/nueva-caracteristica).
+- Abre un pull request describiendo tus cambios.
+
+---
+
+## 📜 Licencia
+Este proyecto está bajo la licencia MIT.
+
+---
+
+## 📬 Contacto
+Autor: [Ana Jessica](https://github.com/AnaJotta)<br>
+Repositorio principal: [Java](https://github.com/AnaJotta/Java)<br>
+Correo / redes: <br> [<img src="https://img.icons8.com/color/48/000000/gmail.png" width="24" />](mailto:anajessicamarinmorales@gmail.com)[<img src="https://img.icons8.com/color/48/000000/linkedin.png" width="24" />](https://www.linkedin.com/in/ana-j-marin-morales/)
+
