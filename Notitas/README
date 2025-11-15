@@ -1,7 +1,11 @@
 # 📝 Notitas
+
 ![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=java&logoColor=white)
+
 ![Spring](https://img.shields.io/badge/Spring_Boot-6DB33F?style=for-the-badge&logo=spring-boot&logoColor=white)
+
 ![Thymeleaf](https://img.shields.io/badge/Thymeleaf-005C0F?style=for-the-badge&logo=thymeleaf&logoColor=white)
+
 ![GitHub last commit](https://img.shields.io/github/last-commit/AnaJotta/GestionTareas)
 
 Una aplicación web simple para la gestión de notas, construida con Spring Boot y Thymeleaf.
@@ -71,23 +75,23 @@ Desde la interfaz web podrás ver la lista de notas, crear nuevas y usar los bot
 ---
 
 📁 Estructura del proyecto
-Notitas/
+Notitas/<br>
 │
-├── src/
-│   ├── main/
-│   │   ├── java/
-│   │   │   ├── com/notitas/
-│   │   │   │   ├── controller/   ← Controladores web (NotaController)
-│   │   │   │   ├── model/        ← Entidades JPA (Nota)
-│   │   │   │   ├── repository/   ← Repositorios Spring Data (NotaRepository)
-│   │   │   │   └── NotitasApplication.java ← Punto de entrada
-│   │   └── resources/
-│   │       ├── static/         ← (Vacío en este proyecto)
-│   │       ├── templates/      ← Plantillas Thymeleaf (index.html, form.html)
-│   │       └── application.properties ← Configuración de Spring
-│   └── test/                   ← Pruebas unitarias
+├── src/<br>
+│   ├── main/<br>
+│   │   ├── java/<br>
+│   │   │   ├── com/notitas/<br>
+│   │   │   │   ├── controller/   ← Controladores web (NotaController)<br>
+│   │   │   │   ├── model/        ← Entidades JPA (Nota)<br>
+│   │   │   │   ├── repository/   ← Repositorios Spring Data (NotaRepository)<br>
+│   │   │   │   └── NotitasApplication.java ← Punto de entrada<br>
+│   │   └── resources/<br>
+│   │       ├── static/         ← (Vacío en este proyecto)<br>
+│   │       ├── templates/      ← Plantillas Thymeleaf (index.html, form.html)<br>
+│   │       └── application.properties ← Configuración de Spring<br>
+│   └── test/                   ← Pruebas unitarias<br>
 │
-└── pom.xml                     ← Dependencias de Maven
+└── pom.xml                     ← Dependencias de Maven<br>
 
 
 ---
