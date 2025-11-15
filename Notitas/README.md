@@ -116,6 +116,6 @@ Este proyecto está bajo la licencia MIT.
 
 ## 📬 Contacto
 Autor: [Ana Jessica](https://github.com/AnaJotta)<br>
-Repositorio principal: [Java](https://github.com/AnaJotta/Java)<br>
+Repositorio principal: [Java](https://github.com/AnaJotta/SpringBootProjects)<br>
 Correo / redes: <br> [<img src="https://img.icons8.com/color/48/000000/gmail.png" width="24" />](mailto:anajessicamarinmorales@gmail.com)[<img src="https://img.icons8.com/color/48/000000/linkedin.png" width="24" />](https://www.linkedin.com/in/ana-j-marin-morales/)
 
