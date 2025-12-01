@@ -38,12 +38,12 @@ public class NotaService {
 
   // Crear una nota
   public notaResponseDTO crearNota(notaRequestDTO dto){
-    Nota nota = new Nota(dto.getTitulo(), dto.getDescripcion(), false);
+    Nota nota = new Nota(dto.getTitulo(), dto.getContenido(), false);
     Nota guardada = notaRepository.save(nota);
     return new notaResponseDTO(
             guardada.getId(),
             guardada.getTitulo(),
-            guardada.getDescripcion(),
+            guardada.getContenido(),
             guardada.isCompletada()
     );
 
@@ -56,7 +56,7 @@ public class NotaService {
   // Listar todas las notas
   public List<notaResponseDTO> listarNotas() {
     return notaRepository.findAll().stream()
-            .map(n -> new notaResponseDTO(n.getId(), n.getTitulo(), n.getDescripcion(), n.isCompletada()))
+            .map(n -> new notaResponseDTO(n.getId(), n.getTitulo(), n.getContenido(), n.isCompletada()))
             .collect(Collectors.toList());
   }
 
@@ -64,7 +64,7 @@ public class NotaService {
   public notaResponseDTO obtenerNotaPorId(Long id) {
     Nota n = notaRepository.findById(id)
             .orElseThrow(() -> new RuntimeException("Nota no encontrada"));
-    return new notaResponseDTO(n.getId(), n.getTitulo(), n.getDescripcion(), n.isCompletada());
+    return new notaResponseDTO(n.getId(), n.getTitulo(), n.getContenido(), n.isCompletada());
   }
 
   // Marcar nota como completada
@@ -73,7 +73,7 @@ public class NotaService {
             .orElseThrow(() -> new RuntimeException("Nota no encontrada"));
     n.setCompletada(true);
     Nota actualizada = notaRepository.save(n);
-    return new notaResponseDTO(actualizada.getId(), actualizada.getTitulo(), actualizada.getDescripcion(), actualizada.isCompletada());
+    return new notaResponseDTO(actualizada.getId(), actualizada.getTitulo(), actualizada.getContenido(), actualizada.isCompletada());
   }
 
   // Eliminar nota

@@ -3,13 +3,13 @@ package com.anajotta.Notitas.dto;
 public class notaRequestDTO {
 
   private String titulo;
-  private String descripcion;
+  private String contenido;
 
   public notaRequestDTO() {}
 
-  public notaRequestDTO(String titulo, String descripcion) {
+  public notaRequestDTO(String titulo, String contenido) {
     this.titulo = titulo;
-    this.descripcion = descripcion;
+    this.contenido = contenido;
   }
 
   public String getTitulo() {
@@ -20,11 +20,11 @@ public class notaRequestDTO {
     this.titulo = titulo;
   }
 
-  public String getDescripcion() {
-    return descripcion;
+  public String getContenido() {
+    return contenido;
   }
 
-  public void setDescripcion(String descripcion) {
-    this.descripcion = descripcion;
+  public void setContenido(String contenido) {
+    this.contenido = contenido;
   }
 }

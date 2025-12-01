@@ -4,15 +4,15 @@ public class notaResponseDTO {
 
   private Long id;
   private String titulo;
-  private String descripcion;
+  private String contenido;
   private boolean completada;
 
   public notaResponseDTO() {}
 
-  public notaResponseDTO(Long id, String titulo, String descripcion, boolean completada) {
+  public notaResponseDTO(Long id, String titulo, String contenido, boolean completada) {
     this.id = id;
     this.titulo = titulo;
-    this.descripcion = descripcion;
+    this.contenido = contenido;
     this.completada = completada;
   }
 
@@ -32,12 +32,12 @@ public class notaResponseDTO {
     this.titulo = titulo;
   }
 
-  public String getDescripcion() {
-    return descripcion;
+  public String getContenido() {
+    return contenido;
   }
 
-  public void setDescripcion(String descripcion) {
-    this.descripcion = descripcion;
+  public void setContenido(String contenido) {
+    this.contenido = contenido;
   }
 
   public boolean isCompletada() {
