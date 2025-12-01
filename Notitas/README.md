@@ -64,19 +64,19 @@ DELETE /notas/{id} : Eliminar una nota.
 
 ## 📁 Estructura del proyecto
 
-Notitas/
+Notitas/<br>
 │
-├── src/
-│   ├── main/
-│   │   ├── java/com/notitas/
-│   │   │   ├── controller/    ← Controladores REST (@RestController)
-│   │   │   ├── model/         ← Entidades JPA (Note)
-│   │   │   ├── repository/    ← Interfaces (NoteRepository)
-│   │   │   └── NotitasApplication.java
-│   │   └── resources/
-│   │       └── application.properties ← Configuración MySQL
-│   └── test/                  ← Pruebas unitarias y REST Docs
-└── pom.xml                    ← Dependencias
+├── src/<br>
+│   ├── main/<br>
+│   │   ├── java/com/notitas/<br>
+│   │   │   ├── controller/    ← Controladores REST (@RestController)<br>
+│   │   │   ├── model/         ← Entidades JPA (Note)<br>
+│   │   │   ├── repository/    ← Interfaces (NoteRepository)<br>
+│   │   │   └── NotitasApplication.java<br>
+│   │   └── resources/<br>
+│   │       └── application.properties ← Configuración MySQL<br>
+│   └── test/                  ← Pruebas unitarias y REST Docs<br>
+└── pom.xml                    ← Dependencias<br>
 
 ---
 
