@@ -1,98 +1,82 @@
-# 📝 Notitas
+# 📝 Notitas API
 
 ![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=java&logoColor=white)
-
 ![Spring](https://img.shields.io/badge/Spring_Boot-6DB33F?style=for-the-badge&logo=spring-boot&logoColor=white)
+![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
+![GitHub last commit](https://img.shields.io/github/last-commit/AnaJotta/SpringBootProjects)
 
-![Thymeleaf](https://img.shields.io/badge/Thymeleaf-005C0F?style=for-the-badge&logo=thymeleaf&logoColor=white)
-
-![GitHub last commit](https://img.shields.io/github/last-commit/AnaJotta/GestionTareas)
-
-Una aplicación web simple para la gestión de notas, construida con Spring Boot y Thymeleaf.
+Una API RESTful para la gestión de notas, construida con Spring Boot y MySQL.
 
 ---
 
 ## 📌 Descripción
-Este proyecto es una aplicación web CRUD (Crear, Leer, Modificar, Eliminar) para gestionar notas personales.
-Es un ejemplo educativo de cómo construir una aplicación web monolítica usando Spring Boot, 
-persistiendo datos con Spring Data JPA (usando H2 como base de datos en memoria) y renderizando el frontend con Thymeleaf.
+Este proyecto es el backend de una aplicación CRUD (Crear, Leer, Modificar, Eliminar) para gestionar notas personales.
+Sirve como ejemplo educativo de cómo construir una API REST robusta usando Spring Boot, persistiendo datos en una base de datos relacional (MySQL) mediante Spring Data JPA y documentando los endpoints.
 
 ---
 
 ## 🚀 Características
 
-Crear nuevas notas con un título y un contenido.
-
-Listar todas las notas existentes en la página principal.
-
-Editar los detalles de una nota existente.
-
-Eliminar notas.
-
-Interfaz de usuario web renderizada en el servidor con Thymeleaf.
-
-Persistencia de datos en una base de datos en memoria (H2).
+- Endpoints REST para operaciones CRUD.
+- Conexión persistente a base de datos MySQL.
+- Uso de DTOs (Data Transfer Objects) para la transferencia de datos.
+- Pruebas unitarias e integración (Spring REST Docs).
+- Gestión de dependencias con Maven.
 
 ---
 
 ## 🛠 Tecnologías usadas
 
-***Backend:*** Spring Boot
-
-***Frontend:*** Thymeleaf (para renderizado de plantillas HTML)
-
-***Acceso a Datos:*** Spring Data JPA
-
-***Base de Datos:*** H2 (Base de datos en memoria)
-
-***Lenguaje:*** Java (versión 17)
-
-***Gestión de Dependencias:*** Maven
-
-***Otras dependencias:*** Lombok (para reducir código boilerplate)
+- **Backend:** Spring Boot (Starter Web)
+- **Acceso a Datos:** Spring Data JPA
+- **Base de Datos:** MySQL (Requiere servidor en ejecución)
+- **Lenguaje:** Java 21
+- **Gestión de Dependencias:** Maven
+- **Herramientas:** Lombok (para reducir código boilerplate)
 
 ---
 
-## 🎯 Uso
+## 🎯 Uso y Ejecución
 
-Asegúrate de tener Java 17 y Maven instalados.
+### Requisitos previos
+1. Tener Java 21 instalado.
+2. Tener un servidor MySQL corriendo.
+3. Crear una base de datos llamada `notitas_db` (o el nombre que tengas en application.properties).
 
-Clona o descarga este repositorio.
+### Pasos
+1. Clona este repositorio.
+2. Configura tu usuario y contraseña de MySQL en `src/main/resources/application.properties`.
+3. Ejecuta la aplicación:
+   ```bash
+   ./mvnw spring-boot:run
+4. La API estará disponible en http://localhost:8080
 
-Navega al directorio Notitas.
+***Probar los Endpoints (usando Postman)***
+GET /notas : Obtener todas las notas.
 
-Ejecuta la aplicación usando el wrapper de Maven:
+POST /notas : Crear una nota (enviar JSON en el body).
 
-Bash:
-./mvnw spring-boot:run
+PUT /notas/{id} : Editar una nota.
 
-(O ejecuta la clase NotitasApplication desde tu IDE).
-
-Abre tu navegador y ve a http://localhost:8080.
-
-Desde la interfaz web podrás ver la lista de notas, crear nuevas y usar los botones de "Editar" y "Eliminar".
+DELETE /notas/{id} : Eliminar una nota.
 
 ---
 
-📁 Estructura del proyecto
-Notitas/<br>
-│
-├── src/<br>
-│   ├── main/<br>
-│   │   ├── java/<br>
-│   │   │   ├── com/notitas/<br>
-│   │   │   │   ├── controller/   ← Controladores web (NotaController)<br>
-│   │   │   │   ├── model/        ← Entidades JPA (Nota)<br>
-│   │   │   │   ├── repository/   ← Repositorios Spring Data (NotaRepository)<br>
-│   │   │   │   └── NotitasApplication.java ← Punto de entrada<br>
-│   │   └── resources/<br>
-│   │       ├── static/         ← (Vacío en este proyecto)<br>
-│   │       ├── templates/      ← Plantillas Thymeleaf (index.html, form.html)<br>
-│   │       └── application.properties ← Configuración de Spring<br>
-│   └── test/                   ← Pruebas unitarias<br>
-│
-└── pom.xml                     ← Dependencias de Maven<br>
+## 📁 Estructura del proyecto
 
+Notitas/
+│
+├── src/
+│   ├── main/
+│   │   ├── java/com/notitas/
+│   │   │   ├── controller/    ← Controladores REST (@RestController)
+│   │   │   ├── model/         ← Entidades JPA (Note)
+│   │   │   ├── repository/    ← Interfaces (NoteRepository)
+│   │   │   └── NotitasApplication.java
+│   │   └── resources/
+│   │       └── application.properties ← Configuración MySQL
+│   └── test/                  ← Pruebas unitarias y REST Docs
+└── pom.xml                    ← Dependencias
 
 ---
 
