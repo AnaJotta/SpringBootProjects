@@ -1,6 +1,6 @@
 # requests.http
 
-@baseUrl = http://localhost:8080
+@baseUrl = http://localhost:8084
 
 ### Crear nota
 POST {{baseUrl}}/api/notas
@@ -8,7 +8,7 @@ Content-Type: application/json
 
 {
   "titulo": "Aprender Spring Boot",
-  "descripcion": "Practicar CRUD con Docker"
+  "contenido": "Practicar CRUD con Docker"
 }
 
 ### Listar notas

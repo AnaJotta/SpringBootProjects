@@ -1,11 +1,10 @@
-package com.anajotta.Notitas.controller;
+package com.anajotta.Notitas;
 
 import com.anajotta.Notitas.dto.notaRequestDTO; // Asegúrate de importar tus DTOs
 import com.anajotta.Notitas.service.NotaService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
@@ -116,7 +115,7 @@ public class WebController {
 
   // Elimina una nota por su ID (DELETE /api/notas/{id})
   @DeleteMapping("/{id}")
-  public void eliminarNota(@PathVariable Long id) {
+  public void eliminarNota(@PathVariable Long id){
     // Llama al servicio que elimina la nota indicada
     notaService.eliminarNota(id);
   }

@@ -12,7 +12,7 @@
 
     <div class="card p-4 mb-5 shadow-sm">
         <h4>Nueva Nota</h4>
-        <form action="/guardar" method="post">
+        <form th:action="@{/guardar}" method="post">
             <div class="mb-3">
                 <label class="form-label">Título</label>
                 <input type="text" name="titulo" class="form-control" placeholder="Ej: Comprar pan" required>
